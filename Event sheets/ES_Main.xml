@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Main</name>
+    <events>
+        <variable constant="0" name="ComboMeter" sid="720592057249100" static="0" type="number">0</variable>
+        <variable constant="0" name="Vie" sid="664470236922726" static="0" type="number">3</variable>
+        <variable constant="0" name="Score" sid="683987846415638" static="0" type="number">0</variable>
+        <variable constant="0" name="TypeSpawn" sid="522364237257122" static="0" type="number">-1</variable>
+        <event-group description="Affichage de l&apos;HUD et gestion de l&apos;interface" sid="219778018623480" title="Affichage HUD et interface">
+            <sub-events>
+                <event-block sid="631317128207263">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="281744340783779" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="592954726388638" type="Score">
+                            <param id="0" name="Text">Score &amp; &quot; points&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="804343241017757" type="Vie">
+                            <param id="0" name="Text">Vie&amp;&quot; vies restantes&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Spawn des déchets (coeur du jeu)" sid="453567111375034" title="Spawn Dechets">
+            <sub-events>
+                <event-block disabled="1" sid="611808762525539">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="106885463989070" type="System">
+                            <param id="0" name="Interval (seconds)">round(random(1,3))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="941854041265611" type="System">
+                            <param id="0" name="Object to create">DechetsFoyer</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(0, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319800342952481">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="952837847032863" type="System">
+                            <param id="0" name="Interval (seconds)">round(random(1,3))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="947060195381820" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Value">choose(0,0,0,0,1,1,1,2,2,3,3,4,4,4,5,6)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="395954784405744">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="436555274673330" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="272828831189872" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="504163790355689" type="System">
+                            <param id="0" name="Object to create">EmballagePlastique</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="652208686336320">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="463739291081548" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="306516922120462" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="479231774867301" type="System">
+                            <param id="0" name="Object to create">EmballageCarton</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="282870780725556">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="446256174859640" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="948893157775718" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="115542469558266" type="System">
+                            <param id="0" name="Object to create">EmballagePapier</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313488215650293">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="399178807560084" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="745801427327724" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="384955545484276" type="System">
+                            <param id="0" name="Object to create">EmballageMetal</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590593195322116">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="252657550962540" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="979618624970014" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="792241661583777" type="System">
+                            <param id="0" name="Object to create">Nourriture</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="946884073012755">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="598108109589767" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="367367175083314" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="364253932149128" type="System">
+                            <param id="0" name="Object to create">Verre</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915786358229440">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="353099181651784" type="System">
+                            <param id="0" name="Variable">TypeSpawn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="264684423501642" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="813863604600237" type="System">
+                            <param id="0" name="Object to create">DechetMenagers</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Gestion des destructions d&apos;items + calcul des points" sid="553696013592589" title="Calcul des points">
+            <sub-events>
+                <event-block sid="923907643801859">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="237356291191996" type="DechetsFoyer">
+                            <param id="0" name="Object">Poubelles</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="677108576714558" type="DechetsFoyer" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="355744167409571">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="623499368842942" type="DechetsFoyer" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="880177383192542" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">DechetsFoyer.Points</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Système de combo metter pour récupérer des vies ? Toutes les X chaines sans erreur récupère une vie ? A voir</comment>
+    </events>
+</c2eventsheet>
