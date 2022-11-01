@@ -136,7 +136,7 @@
         <object-type name="Vie" sid="729870619403143">
             <plugin id="Text" />
         </object-type>
-        <object-type name="PoubelleVertes" sid="442437558982017">
+        <object-type name="PoubelleVerte" sid="442437558982017">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116815687551967" speed="5">
@@ -168,6 +168,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="MessageGameOver" sid="919626710031263">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Joker" sid="462993464432114">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ComboMeter" sid="613323240851412">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="DechetsFoyer" plugin-id="Sprite" sid="119042174414518">
@@ -182,6 +191,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Points" sid="330558463567944" type="number" />
+                <instance-variable name="PoubelleAssocié" sid="451610778772085" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="365973508952188">
@@ -197,8 +207,11 @@
                 <member>Dechetterie</member>
                 <member>PoubelleAVerre</member>
                 <member>PoubelleJaune</member>
-                <member>PoubelleVertes</member>
+                <member>PoubelleVerte</member>
             </members>
+            <instance-variables>
+                <instance-variable name="PoubelleAssociée" sid="929323595920815" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="458639383812210">
                     <behavior id="DragnDrop" />
@@ -209,9 +222,11 @@
     <layout-folder>
         <layout>L_Main.xml</layout>
         <layout>L_Objects.xml</layout>
+        <layout>L_Game_Over.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ES_Main.xml</event-sheet>
+        <event-sheet>ES_Game_Over.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

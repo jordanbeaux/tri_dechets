@@ -47,13 +47,16 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PoubelleVertes" uid="16">
+                <instance type="PoubelleVerte" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <PoubelleAssociée>2</PoubelleAssociée>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
                             <properties>
@@ -84,6 +87,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <PoubelleAssociée>1</PoubelleAssociée>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
                             <properties>
@@ -95,8 +101,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>373</x>
-                        <y>357</y>
+                        <x>364</x>
+                        <y>356</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -114,6 +120,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <PoubelleAssociée>3</PoubelleAssociée>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
                             <properties>
@@ -144,6 +153,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <PoubelleAssociée>0</PoubelleAssociée>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
                             <properties>
@@ -155,8 +167,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>351</x>
-                        <y>492</y>
+                        <x>274</x>
+                        <y>349</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -215,7 +227,7 @@
                 </instance>
                 <instance type="Vie" uid="15">
                     <properties>
-                        <text>Text</text>
+                        <text>Vie</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
@@ -230,6 +242,60 @@
                     <world>
                         <x>422</x>
                         <y>21</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Joker" uid="21">
+                    <properties>
+                        <text>Joker</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>425</x>
+                        <y>62</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ComboMeter" uid="22">
+                    <properties>
+                        <text>Combo :</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>9</x>
+                        <y>67</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>

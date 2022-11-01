@@ -10,9 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">L_Main</layout>
-        <layout order="2">L_Objects</layout>
-        <event-sheet active="1" order="1">ES_Main</event-sheet>
+        <layout order="1">L_Main</layout>
+        <layout order="3">L_Objects</layout>
+        <layout order="4">L_Game_Over</layout>
+        <event-sheet active="1" order="2">ES_Main</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,8 +22,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="DechetsFoyer" />
-        <family expanded="0" name="Poubelles" />
+        <family expanded="1" name="DechetsFoyer" />
+        <family expanded="1" name="Poubelles" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -39,7 +40,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/EmballagePapier/" />
         <folder expanded="1" path="animation-folder/Verre/" />
         <folder expanded="1" path="animation-folder/DechetMenagers/" />
-        <folder expanded="1" path="animation-folder/PoubelleVertes/" />
+        <folder expanded="1" path="animation-folder/PoubelleVerte/" />
         <folder expanded="1" path="animation-folder/PoubelleJaune/" />
         <folder expanded="1" path="animation-folder/PoubelleAVerre/" />
         <folder expanded="1" path="animation-folder/Dechetterie/" />
