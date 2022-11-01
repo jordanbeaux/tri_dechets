@@ -35,7 +35,7 @@
         </event-group>
         <event-group description="Spawn des déchets (coeur du jeu)" sid="453567111375034" title="Spawn Dechets">
             <sub-events>
-                <event-block disabled="1" sid="319800342952481">
+                <event-block sid="319800342952481">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="952837847032863" type="System">
                             <param id="0" name="Interval (seconds)">round(random(MinSpawn,MaxSpawn))</param>
@@ -45,19 +45,6 @@
                         <action id="-9" name="Set value" sid="947060195381820" type="System">
                             <param id="0" name="Variable">TypeSpawn</param>
                             <param id="1" name="Value">choose(0,0,0,0,1,1,1,2,2,3,3,4,4,4,5,6)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="412988737872806">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="914027820528007" type="System">
-                            <param id="0" name="Interval (seconds)">round(random(MinSpawn,MaxSpawn))</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="227387279901034" type="System">
-                            <param id="0" name="Variable">TypeSpawn</param>
-                            <param id="1" name="Value">choose(0,0,0,0, -1, -1)</param>
                         </action>
                     </actions>
                 </event-block>
