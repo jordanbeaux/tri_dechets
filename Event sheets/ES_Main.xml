@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Main</name>
     <events>
+        <variable constant="0" name="Dechets_mal_tries" sid="926606438742160" static="0" type="number">0</variable>
         <variable constant="0" name="MaxSpawn" sid="818370869256453" static="0" type="number">3</variable>
         <variable constant="0" name="MinSpawn" sid="200111873380927" static="0" type="number">1</variable>
         <variable constant="0" name="Joker" sid="841266474720795" static="0" type="number">5</variable>
@@ -242,6 +243,15 @@
                             <param id="0" name="Variable">Joker</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="500158327123320" type="System">
+                            <param id="0" name="Variable">Dechets_mal_tries</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Push" sid="197954713098573" type="Details_dechets_mal_tries">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">DechetsFoyer.NomDechet</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Quand on a plus de joker et que l&apos;on se trompe, on perd une vie</comment>
@@ -266,6 +276,32 @@
                         <action id="-11" name="Subtract from" sid="335655611598304" type="System">
                             <param id="0" name="Variable">Vie</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="747277380593052" type="System">
+                            <param id="0" name="Variable">Dechets_mal_tries</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Push" sid="112933721136553" type="Details_dechets_mal_tries">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">DechetsFoyer.NomDechet</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Ajout détails erreurs</comment>
+                <event-block sid="437286735989073">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="377127006652052" type="DechetsFoyer" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="420260550463722" type="System">
+                            <param id="0" name="Variable">Dechets_mal_tries</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Push" sid="838816059342073" type="Details_dechets_mal_tries">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">DechetsFoyer.NomDechet</param>
+                            <param id="2" name="Axis">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -321,35 +357,66 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>Système de combo metter pour récupérer des jokers tous les 10 déchets bien triés</comment>
-        <event-block sid="702336179537256">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="968166599774177" type="System" />
-                <condition id="-14" name="Compare variable" sid="334306053463288" type="System">
-                    <param id="0" name="Variable">ComboMeter</param>
-                    <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="759831253103555" title="Initialisation">
             <sub-events>
-                <event-block sid="691931513306412">
+                <comment>Initialisation details erreurs</comment>
+                <event-block disabled="1" sid="673086284289043">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="362316609625133" type="System">
-                            <param id="0" name="First value">ComboMeter%10</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="422164424466984" type="System" />
+                        <condition id="-2" name="On start of layout" sid="734881224664644" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="970925087209577" type="System">
-                            <param id="0" name="Variable">Joker</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="1" name="Set size" sid="260320666152694" type="Details_dechets_mal_tries">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-group>
+        <event-group description="" sid="101060285345599" title="Systeme Joker">
+            <sub-events>
+                <comment>Système de combo metter pour récupérer des jokers tous les 10 déchets bien triés</comment>
+                <event-block sid="702336179537256">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="968166599774177" type="System" />
+                        <condition id="-14" name="Compare variable" sid="334306053463288" type="System">
+                            <param id="0" name="Variable">ComboMeter</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="691931513306412">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="362316609625133" type="System">
+                                    <param id="0" name="First value">ComboMeter%10</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="422164424466984" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="970925087209577" type="System">
+                                    <param id="0" name="Variable">Joker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="168587659186563">
+            <conditions>
+                <condition id="0" name="On clicked" sid="199853916814514" type="TestGO" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="737387817612927" type="System">
+                    <param id="0" name="Layout">L_Game_Over</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

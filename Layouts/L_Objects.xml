@@ -39,6 +39,7 @@
                     <instance-variables>
                         <Points>50</Points>
                         <PoubelleAssocié>2</PoubelleAssocié>
+                        <NomDechet>Déchets organiques</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -82,6 +83,7 @@
                     <instance-variables>
                         <Points>300</Points>
                         <PoubelleAssocié>1</PoubelleAssocié>
+                        <NomDechet>Emballage plastique</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -125,6 +127,7 @@
                     <instance-variables>
                         <Points>75</Points>
                         <PoubelleAssocié>1</PoubelleAssocié>
+                        <NomDechet>Déchets cartons</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -168,6 +171,7 @@
                     <instance-variables>
                         <Points>200</Points>
                         <PoubelleAssocié>1</PoubelleAssocié>
+                        <NomDechet>Déchets métalliques</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -211,6 +215,7 @@
                     <instance-variables>
                         <Points>50</Points>
                         <PoubelleAssocié>1</PoubelleAssocié>
+                        <NomDechet>Papiers</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -254,6 +259,7 @@
                     <instance-variables>
                         <Points>400</Points>
                         <PoubelleAssocié>3</PoubelleAssocié>
+                        <NomDechet>Verre</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -297,6 +303,7 @@
                     <instance-variables>
                         <Points>500</Points>
                         <PoubelleAssocié>0</PoubelleAssocié>
+                        <NomDechet>Déchets ménagers</NomDechet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

@@ -10,6 +10,7 @@
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -64,9 +65,6 @@
         </object-type>
         <object-type name="Touch" sid="2463496682349194">
             <plugin id="Touch" />
-        </object-type>
-        <object-type name="Button" sid="991198197487420">
-            <plugin id="Button" />
         </object-type>
         <object-type name="Browser" sid="938207300143758">
             <plugin id="Browser" />
@@ -177,6 +175,15 @@
         <object-type name="ComboMeter" sid="613323240851412">
             <plugin id="Text" />
         </object-type>
+        <object-type global="1" name="Details_dechets_mal_tries" sid="568902030240285">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="DetailsErreur" sid="252909044123637">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TestGO" sid="367923710423889">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families>
         <family name="DechetsFoyer" plugin-id="Sprite" sid="119042174414518">
@@ -192,6 +199,7 @@
             <instance-variables>
                 <instance-variable name="Points" sid="330558463567944" type="number" />
                 <instance-variable name="PoubelleAssocié" sid="451610778772085" type="number" />
+                <instance-variable name="NomDechet" sid="565937733645900" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="365973508952188">
