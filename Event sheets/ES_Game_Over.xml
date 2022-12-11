@@ -4,27 +4,43 @@
     <name>ES_Game_Over</name>
     <events>
         <include>ES_Main</include>
-        <event-block disabled="1" sid="915759802997812">
+        <event-block sid="637304437236424">
             <conditions>
-                <condition id="3" name="For each element" sid="186631034802281" type="Details_dechets_mal_tries">
-                    <param id="0" name="Axes">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="1" name="Append text" sid="175346339418228" type="DetailsErreur">
-                    <param id="0" name="Text">newline &amp; Details_dechets_mal_tries.CurValue</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block bookmark="1" sid="637304437236424">
-            <conditions>
-                <condition id="-11" name="For Each" sid="404710439162597" type="System">
-                    <param id="0" name="Object">Details_dechets_mal_tries</param>
+                <condition id="-2" name="On start of layout" sid="243474833085538" type="System" />
+                <condition id="-10" name="For" sid="404710439162597" type="System">
+                    <param id="0" name="Name">&quot;&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">Details_dechets_mal_tries.Width-1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="1" name="Append text" sid="502962258798750" type="DetailsErreur">
-                    <param id="0" name="Text">Details_dechets_mal_tries.CurValue</param>
+                    <param id="0" name="Text">newline&amp;Details_dechets_mal_tries.At(loopindex)</param>
+                </action>
+                <action id="-12" name="Set group active" sid="568791963965112" type="System">
+                    <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="623011764566419">
+            <conditions>
+                <condition id="0" name="On clicked" sid="743896150773643" type="Restart" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="935575413571201" type="System">
+                    <param id="0" name="Layout">L_Main</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="554637921460876" type="System" />
+                <action id="-12" name="Set group active" sid="937143025293478" type="System">
+                    <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Clear" sid="337603431018523" type="Details_dechets_mal_tries" />
+                <action id="1" name="Set size" sid="835030665088319" type="Details_dechets_mal_tries">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
                 </action>
             </actions>
         </event-block>

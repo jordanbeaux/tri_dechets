@@ -184,6 +184,9 @@
         <object-type name="TestGO" sid="367923710423889">
             <plugin id="Button" />
         </object-type>
+        <object-type name="Restart" sid="963132230435605">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families>
         <family name="DechetsFoyer" plugin-id="Sprite" sid="119042174414518">

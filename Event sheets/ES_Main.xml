@@ -294,14 +294,14 @@
                         <condition id="-4" name="Is outside layout" sid="377127006652052" type="DechetsFoyer" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="420260550463722" type="System">
-                            <param id="0" name="Variable">Dechets_mal_tries</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="5" name="Push" sid="838816059342073" type="Details_dechets_mal_tries">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">DechetsFoyer.NomDechet</param>
                             <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="420260550463722" type="System">
+                            <param id="0" name="Variable">Dechets_mal_tries</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -360,18 +360,6 @@
         <event-group description="" sid="759831253103555" title="Initialisation">
             <sub-events>
                 <comment>Initialisation details erreurs</comment>
-                <event-block disabled="1" sid="673086284289043">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="734881224664644" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set size" sid="260320666152694" type="Details_dechets_mal_tries">
-                            <param id="0" name="Width">0</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="101060285345599" title="Systeme Joker">
@@ -415,6 +403,19 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="737387817612927" type="System">
                     <param id="0" name="Layout">L_Game_Over</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="389318647383370">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="529375593733523" type="DechetsFoyer" />
+                <condition id="-4" name="Is outside layout" sid="447512248158409" type="DechetsFoyer" />
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="122215055041659" type="Details_dechets_mal_tries">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">DechetsFoyer.NomDechet</param>
+                    <param id="2" name="Axis">0</param>
                 </action>
             </actions>
         </event-block>
