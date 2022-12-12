@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Debug_Screen</name>
+    <events>
+        <include>ES_Main</include>
+        <event-block sid="617356380099937">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="817098869159021" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="651712225949955" type="System">
+                    <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="872526784567913">
+            <conditions>
+                <condition id="0" name="On clicked" sid="226824425734292" type="RunGame" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="277551613739393" type="System">
+                    <param id="0" name="Layout">L_Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="918392865013819">
+            <conditions>
+                <condition id="1" name="On text changed" sid="565535956606301" type="VieDepart" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="253460112711386" type="System">
+                    <param id="0" name="Variable">Vie</param>
+                    <param id="1" name="Value">VieDepart.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="311181885108494">
+            <conditions>
+                <condition id="1" name="On text changed" sid="683643463903036" type="JokerDepart" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="892869982121658" type="System">
+                    <param id="0" name="Variable">Joker</param>
+                    <param id="1" name="Value">JokerDepart.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="628436070344037">
+            <conditions>
+                <condition id="1" name="On text changed" sid="424655017394406" type="BorneMinSpawn" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="261756139793863" type="System">
+                    <param id="0" name="Variable">MinSpawn</param>
+                    <param id="1" name="Value">BorneMinSpawn.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="480438478785116">
+            <conditions>
+                <condition id="1" name="On text changed" sid="838809756059260" type="BorneMaxSpawn" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="733367312330742" type="System">
+                    <param id="0" name="Variable">MaxSpawn</param>
+                    <param id="1" name="Value">BorneMaxSpawn.Text</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
