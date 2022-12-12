@@ -406,16 +406,18 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="389318647383370">
+        <event-block sid="739294813180507">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="529375593733523" type="DechetsFoyer" />
-                <condition id="-4" name="Is outside layout" sid="447512248158409" type="DechetsFoyer" />
+                <condition id="-8" name="Compare two values" sid="843726053653268" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;L_Main&quot;</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="5" name="Push" sid="122215055041659" type="Details_dechets_mal_tries">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">DechetsFoyer.NomDechet</param>
-                    <param id="2" name="Axis">0</param>
+                <action id="-12" name="Set group active" sid="751404293494372" type="System">
+                    <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
             </actions>
         </event-block>

@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
@@ -37,6 +38,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>L_DebugScreen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -187,6 +189,27 @@
         <object-type name="Restart" sid="963132230435605">
             <plugin id="Button" />
         </object-type>
+        <object-type name="DebugTitle" sid="940641998030454">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="VieDepart" sid="183913557171221">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="JokerDepart" sid="695060170729726">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BorneMinSpawn" sid="612350585914321">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="BorneMaxSpawn" sid="310723079944014">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="RunGame" sid="976691105637016">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="GoDebug" sid="416342332887833">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families>
         <family name="DechetsFoyer" plugin-id="Sprite" sid="119042174414518">
@@ -234,10 +257,12 @@
         <layout>L_Main.xml</layout>
         <layout>L_Objects.xml</layout>
         <layout>L_Game_Over.xml</layout>
+        <layout>L_DebugScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ES_Main.xml</event-sheet>
         <event-sheet>ES_Game_Over.xml</event-sheet>
+        <event-sheet>ES_Debug_Screen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
