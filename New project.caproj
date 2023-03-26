@@ -34,7 +34,7 @@
     </configurations>
     <window-size>
         <width>640</width>
-        <height>640</height>
+        <height>960</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -177,7 +177,7 @@
         <object-type name="ComboMeter" sid="613323240851412">
             <plugin id="Text" />
         </object-type>
-        <object-type global="1" name="Details_dechets_mal_tries" sid="568902030240285">
+        <object-type global="1" name="Liste_Details_dechets_mal_tries" sid="568902030240285">
             <plugin id="Arr" />
         </object-type>
         <object-type name="DetailsErreur" sid="252909044123637">

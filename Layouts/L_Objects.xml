@@ -49,8 +49,8 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>600</gravity>
-                                <max-fall-speed>600</max-fall-speed>
+                                <gravity>575</gravity>
+                                <max-fall-speed>575</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -137,8 +137,8 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>575</gravity>
-                                <max-fall-speed>575</max-fall-speed>
+                                <gravity>525</gravity>
+                                <max-fall-speed>525</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>

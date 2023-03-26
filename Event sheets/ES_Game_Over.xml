@@ -10,12 +10,12 @@
                 <condition id="-10" name="For" sid="404710439162597" type="System">
                     <param id="0" name="Name">&quot;&quot;</param>
                     <param id="1" name="Start index">0</param>
-                    <param id="2" name="End index">Details_dechets_mal_tries.Width-1</param>
+                    <param id="2" name="End index">Liste_Details_dechets_mal_tries.Width-1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="1" name="Append text" sid="502962258798750" type="DetailsErreur">
-                    <param id="0" name="Text">newline&amp;Details_dechets_mal_tries.At(loopindex)</param>
+                    <param id="0" name="Text">newline&amp;Liste_Details_dechets_mal_tries.At(loopindex)</param>
                 </action>
                 <action id="-12" name="Set group active" sid="568791963965112" type="System">
                     <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
@@ -36,8 +36,8 @@
                     <param id="0" name="Group name">&quot;Spawn Dechets&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="0" name="Clear" sid="337603431018523" type="Details_dechets_mal_tries" />
-                <action id="1" name="Set size" sid="835030665088319" type="Details_dechets_mal_tries">
+                <action id="0" name="Clear" sid="337603431018523" type="Liste_Details_dechets_mal_tries" />
+                <action id="1" name="Set size" sid="835030665088319" type="Liste_Details_dechets_mal_tries">
                     <param id="0" name="Width">0</param>
                     <param id="1" name="Height">1</param>
                     <param id="2" name="Depth">1</param>

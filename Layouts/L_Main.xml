@@ -5,7 +5,7 @@
     <event-sheet>ES_Main</event-sheet>
     <size>
         <width>640</width>
-        <height>640</height>
+        <height>960</height>
     </size>
     <margins>
         <horizontal>0</horizontal>
@@ -68,8 +68,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>196</x>
-                        <y>343</y>
+                        <x>1167</x>
+                        <y>493</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -101,8 +101,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>364</x>
-                        <y>356</y>
+                        <x>1284</x>
+                        <y>629</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -134,8 +134,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>505</x>
-                        <y>343</y>
+                        <x>301</x>
+                        <y>812</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -167,8 +167,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>274</x>
-                        <y>349</y>
+                        <x>1170</x>
+                        <y>305</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -320,8 +320,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>396</x>
-                        <y>495</y>
+                        <x>524</x>
+                        <y>908</y>
                         <z>0</z>
                         <width>100</width>
                         <height>24</height>
@@ -335,7 +335,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Details_dechets_mal_tries" uid="23">
+        <instance type="Liste_Details_dechets_mal_tries" uid="23">
             <properties>
                 <width>0</width>
                 <height>1</height>

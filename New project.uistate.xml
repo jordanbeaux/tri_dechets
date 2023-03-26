@@ -11,17 +11,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">L_Main</layout>
-        <layout active="1" order="2">L_Objects</layout>
+        <layout order="2">L_Objects</layout>
         <layout order="3">L_Game_Over</layout>
         <layout order="5">L_DebugScreen</layout>
-        <event-sheet order="1">ES_Main</event-sheet>
+        <event-sheet active="1" order="1">ES_Main</event-sheet>
         <event-sheet order="4">ES_Game_Over</event-sheet>
         <event-sheet order="6">ES_Debug_Screen</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_Main</name>
     <events>
+        <variable constant="0" name="Poubelle_Selectionne" sid="826251068224503" static="0" type="number">0</variable>
         <variable constant="0" name="Dechets_mal_tries" sid="926606438742160" static="0" type="number">0</variable>
         <variable constant="0" name="MaxSpawn" sid="818370869256453" static="0" type="number">3</variable>
         <variable constant="0" name="MinSpawn" sid="200111873380927" static="0" type="number">1</variable>
@@ -62,7 +63,7 @@
                         <action id="-3" name="Create object" sid="504163790355689" type="System">
                             <param id="0" name="Object to create">EmballagePlastique</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -80,7 +81,7 @@
                         <action id="-3" name="Create object" sid="479231774867301" type="System">
                             <param id="0" name="Object to create">EmballageCarton</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -98,7 +99,7 @@
                         <action id="-3" name="Create object" sid="115542469558266" type="System">
                             <param id="0" name="Object to create">EmballagePapier</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -116,7 +117,7 @@
                         <action id="-3" name="Create object" sid="384955545484276" type="System">
                             <param id="0" name="Object to create">EmballageMetal</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -134,7 +135,7 @@
                         <action id="-3" name="Create object" sid="792241661583777" type="System">
                             <param id="0" name="Object to create">Nourriture</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -152,7 +153,7 @@
                         <action id="-3" name="Create object" sid="364253932149128" type="System">
                             <param id="0" name="Object to create">Verre</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -170,7 +171,7 @@
                         <action id="-3" name="Create object" sid="813863604600237" type="System">
                             <param id="0" name="Object to create">DechetMenagers</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(16, WindowWidth-16)</param>
+                            <param id="2" name="X">random(16, WindowWidth*2-16)</param>
                             <param id="3" name="Y">0</param>
                         </action>
                     </actions>
@@ -247,7 +248,7 @@
                             <param id="0" name="Variable">Dechets_mal_tries</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="5" name="Push" sid="197954713098573" type="Details_dechets_mal_tries">
+                        <action id="5" name="Push" sid="197954713098573" type="Liste_Details_dechets_mal_tries">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">DechetsFoyer.NomDechet</param>
                             <param id="2" name="Axis">0</param>
@@ -281,7 +282,7 @@
                             <param id="0" name="Variable">Dechets_mal_tries</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="5" name="Push" sid="112933721136553" type="Details_dechets_mal_tries">
+                        <action id="5" name="Push" sid="112933721136553" type="Liste_Details_dechets_mal_tries">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">DechetsFoyer.NomDechet</param>
                             <param id="2" name="Axis">0</param>
@@ -294,7 +295,7 @@
                         <condition id="-4" name="Is outside layout" sid="377127006652052" type="DechetsFoyer" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Push" sid="838816059342073" type="Details_dechets_mal_tries">
+                        <action id="5" name="Push" sid="838816059342073" type="Liste_Details_dechets_mal_tries">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">DechetsFoyer.NomDechet</param>
                             <param id="2" name="Axis">0</param>
@@ -359,7 +360,68 @@
         </event-group>
         <event-group description="" sid="759831253103555" title="Initialisation">
             <sub-events>
-                <comment>Initialisation details erreurs</comment>
+                <event-block sid="262483324041548">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="349841050028418" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="318974842863289">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="550822230533855" type="PoubelleAVerre" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="238711276545738" type="PoubelleAVerre">
+                                    <param id="0" name="Object">PoubelleVerte</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="500057004563768" type="PoubelleAVerre" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="222161176316573">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="794173743419730" type="PoubelleVerte" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="562702965653875" type="PoubelleVerte">
+                                    <param id="0" name="Object">PoubelleJaune</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="109308327153144" type="PoubelleVerte" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="260228997911808">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="826922434839539" type="PoubelleJaune" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="383778684446220" type="PoubelleJaune">
+                                    <param id="0" name="Object">Dechetterie</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="212431451479874" type="PoubelleJaune" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="506886277460545">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="828107486915452" type="Dechetterie" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="514762525307093" type="Dechetterie">
+                                    <param id="0" name="Object">PoubelleAVerre</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="892788317513122" type="Dechetterie" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="101060285345599" title="Systeme Joker">
